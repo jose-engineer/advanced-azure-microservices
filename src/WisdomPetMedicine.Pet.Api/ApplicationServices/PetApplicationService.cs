@@ -35,7 +35,7 @@ namespace WisdomPetMedicine.Pet.Api.ApplicationServices
             this.logger = logger;
             DomainEvents.PetFlaggedForAdoption.Register(async c =>
             {
-                var integrationEvent = new PetFlaggedForAdoptionIntegrationEvent()
+                var integrationEvent = new PetFlaggedForAdoptionIntegrationEvent() //This object recieves the pet flagging for adoption
                 {
                     Id = c.Id,
                     Name = c.Name,
